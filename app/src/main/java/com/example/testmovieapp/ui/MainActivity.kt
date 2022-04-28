@@ -7,6 +7,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -80,21 +81,24 @@ fun GetMovieData(viewModel: MovieViewModel, context: Context) {
     }
 }
 
-@OptIn(ExperimentalMaterialApi::class)
+
 @Composable
 fun SetMovieData(data: Movies.Results, onClickListener: () -> Unit) {
 
-    Card(modifier = Modifier
+  /*  Card(modifier = Modifier
         .fillMaxWidth(),
         backgroundColor = Color.White,
         shape = RoundedCornerShape(corner = CornerSize(16.dp)),
         onClick = { onClickListener() }
 
-    ) {
-        Row {
+    ) {*/
+        Row(
+            modifier = Modifier.clickable {
+                onClickListener()
+            }
+        ) {
             Image(painter = rememberImagePainter(data = "${ApiService.IMAGE_URL}${data.poster_path}", builder = {
                 transformations(RoundedCornersTransformation(6F))
-                crossfade(true)
                 placeholder(R.drawable.ic_launcher_background)
             }), contentDescription = null, modifier = Modifier
                 .size(100.dp)
@@ -109,7 +113,7 @@ fun SetMovieData(data: Movies.Results, onClickListener: () -> Unit) {
 
             }
         }
-    }
+    //}
 
 }
 
