@@ -1,6 +1,6 @@
-package com.movie.findmovie.di
+package com.example.testmovieapp.di
 
-import com.movie.findmovie.data.network.ApiService
+import com.example.testmovieapp.data.network.ApiService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -19,19 +19,17 @@ object NetworkModule {
     @Singleton
     fun providesMoshi(): Moshi = Moshi
         .Builder()
-        .run {
-            add(KotlinJsonAdapterFactory())
-                .build()
-        }
+        .add(KotlinJsonAdapterFactory())
+        .build()
+
 
     @Provides
     @Singleton
     fun providesApiService(moshi: Moshi): ApiService =
         Retrofit
             .Builder()
-            .run {
-                baseUrl(ApiService.BASE_URL)
-                addConverterFactory(MoshiConverterFactory.create(moshi))
-                build()
-            }.create(ApiService::class.java)
+                .baseUrl(ApiService.BASE_URL)
+                .addConverterFactory(MoshiConverterFactory.create(moshi))
+                .build()
+            .create(ApiService::class.java)
 }

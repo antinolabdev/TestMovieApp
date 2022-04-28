@@ -1,6 +1,6 @@
-package com.movie.findmovie.data.network
+package com.example.testmovieapp.data.network
 
-import com.movie.findmovie.data.model.Movies
+import com.example.testmovieapp.data.model.Movies
 import retrofit2.Response
 import retrofit2.http.GET
 

@@ -1,4 +1,4 @@
-package com.movie.findmovie.utils
+package com.example.testmovieapp.utils
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

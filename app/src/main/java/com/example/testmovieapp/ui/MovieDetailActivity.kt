@@ -30,8 +30,8 @@ class MovieDetailActivity : ComponentActivity() {
                     val bundle = intent.extras
                     val image = bundle?.getString("image")
                     val name = bundle?.getString("title")
-                    val rating = bundle?.getString("rating")
-                    val description = bundle?.getString("description")
+                    val rating = bundle?.getString("vote")
+                    val description = bundle?.getString("overview")
                     MovieDetails(name!!, image!!, rating!!, description!!)
                 }
             }

@@ -1,6 +1,4 @@
-package com.movie.findmovie.utils
-
-import com.movie.findmovie.data.model.Movies
+package com.example.testmovieapp.utils
 
 sealed class ApiState<out T> {
 

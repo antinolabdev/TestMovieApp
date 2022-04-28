@@ -1,4 +1,4 @@
-package com.movie.findmovie.data.model
+package com.example.testmovieapp.data.model
 
 data class Movies(
     val page: Int?,

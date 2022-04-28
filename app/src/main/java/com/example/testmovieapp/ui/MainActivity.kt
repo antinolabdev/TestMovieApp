@@ -24,9 +24,9 @@ import coil.transform.RoundedCornersTransformation
 import com.example.testmovieapp.R
 import com.example.testmovieapp.ui.theme.TestMovieAppTheme
 import com.example.testmovieapp.viewmodel.MovieViewModel
-import com.movie.findmovie.data.model.Movies
-import com.movie.findmovie.data.network.ApiService
-import com.movie.findmovie.utils.ApiState
+import com.example.testmovieapp.data.model.Movies
+import com.example.testmovieapp.data.network.ApiService
+import com.example.testmovieapp.utils.ApiState
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -85,9 +85,7 @@ fun GetMovieData(viewModel: MovieViewModel, context: Context) {
 fun SetMovieData(data: Movies.Results, onClickListener: () -> Unit) {
 
     Card(modifier = Modifier
-        .padding(horizontal = 8.dp, vertical = 8.dp)
         .fillMaxWidth(),
-        elevation = 2.dp,
         backgroundColor = Color.White,
         shape = RoundedCornerShape(corner = CornerSize(16.dp)),
         onClick = { onClickListener() }

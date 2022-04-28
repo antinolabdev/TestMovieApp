@@ -1,7 +1,7 @@
 package com.example.testmovieapp.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.movie.findmovie.data.repository.MovieRepository
+import com.example.testmovieapp.data.repository.MovieRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

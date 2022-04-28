@@ -1,7 +1,7 @@
-package com.movie.findmovie.data.repository
+package com.example.testmovieapp.data.repository
 
-import com.movie.findmovie.data.network.ApiService
-import com.movie.findmovie.utils.toResultFlow
+import com.example.testmovieapp.data.network.ApiService
+import com.example.testmovieapp.utils.toResultFlow
 import javax.inject.Inject
 
 class MovieRepository @Inject constructor(private val apiService: ApiService) {
