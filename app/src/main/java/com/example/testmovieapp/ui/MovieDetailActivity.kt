@@ -50,7 +50,6 @@ fun MovieDetails(name: String, image: String, rating: String, description: Strin
             painter = rememberImagePainter(
                 data = image,
                 builder = {
-                    crossfade(true)
                     placeholder(R.drawable.ic_launcher_foreground)
                 }
             ),
